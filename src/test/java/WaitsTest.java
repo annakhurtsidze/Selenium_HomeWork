@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -19,7 +20,8 @@ public class WaitsTest {
         driver.findElement(By.xpath(".//button[@id='startStopButton']")).click();
         wait.until(ExpectedConditions.textToBe(By.xpath(".//div[@id='progressBar']"), "100%"));
         String progressBarText = driver.findElement(By.xpath(".//div[@id='progressBar']")).getText();
-        System.out.println(progressBarText);
+//        System.out.println(progressBarText);
+        Assert.assertEquals("100%", progressBarText);
         driver.close();
     }
 }

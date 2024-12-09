@@ -1,6 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class WebFormsTest {
@@ -14,14 +15,16 @@ public class WebFormsTest {
 
         driver.findElement(By.xpath(".//select[@id='dropdowm-menu-1']")).click();
         driver.findElement(By.xpath(".//option[@value='python']")).click();
-        System.out.println(driver.findElement(By.xpath(".//option[@value='python']")).getText());
+//        System.out.println(driver.findElement(By.xpath(".//option[@value='python']")).getText());
+        Assert.assertEquals(driver.findElement(By.xpath(".//option[@value='python']")).getText(), "Python");
         driver.findElement(By.xpath(".//input[@value='option-1']")).click();
         driver.findElement(By.xpath(".//input[@value='option-2']")).click();
         driver.findElement(By.xpath(".//input[@value='option-4']")).click();
         driver.findElement(By.xpath(".//input[@type='radio' and @value='yellow']")).click();
         driver.findElement(By.xpath(".//select[@id='fruit-selects']")).click();
-        boolean orangeOptionState = driver.findElement(By.xpath(".//option[@value='orange']")).isEnabled();
-        System.out.println(orangeOptionState);
+//        boolean orangeOptionState = driver.findElement(By.xpath(".//option[@value='orange']")).isEnabled();
+        Assert.assertFalse(driver.findElement(By.xpath(".//option[@value='orange']")).isEnabled());
+//        System.out.println(orangeOptionState);
 
         driver.close();
     }
