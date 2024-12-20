@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="POM">
+    <test name="Commands Test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="CommandsTest">
+                <methods>
+                    <include name="dynamicControlsTest"/>
+                    <include name="dragAndDropTest"/>
+                </methods>
+            </class>
+        </classes>
+
+
+
+    </test>
+
+    <test name="Google page test with robot class">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="GoogleRobotTest">
+                <methods>
+                    <include name="robotTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Action class Tests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="homeWork4">
+                <methods>
+                    <include name="webTablesTest"/>
+                    <include name="hoverTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Page scroll Tests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="ScrollTest">
+                <methods>
+                    <include name="scrollToElement"/>
+                    <include name="fullScrollTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Wait Test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="WaitsTest">
+                <methods>
+                    <include name="waitsTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="WebForms Test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="WebFormsTest">
+                <methods>
+                    <include name="webFormsTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
