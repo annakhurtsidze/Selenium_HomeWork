@@ -1,7 +1,6 @@
 package Internet.Steps;
 
 import Internet.WebElements.TablesWebElements;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 

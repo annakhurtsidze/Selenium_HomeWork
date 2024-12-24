@@ -72,4 +72,18 @@
             </class>
         </classes>
     </test>
+
+
+    <test name="Selenide Test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="SelenideTests.SelenideTests">
+                <methods>
+                    <include name="printNamesAndBalancesSelenide"/>
+                    <include name="demoQaTest"/>
+                    <include name="googleTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite>
